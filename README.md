@@ -2,7 +2,7 @@
 My iOS Notes, In case i get amnesia 
 ![iOS 8](/Images/iOS8Banner.jpeg)
 
-* XCode
+* [XCode](/XCode.md)
 * MVC
 * Foundation
 * View
