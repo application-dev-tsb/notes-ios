@@ -22,3 +22,9 @@ My iOS Notes, In case i get amnesia
 * Core Motion
 * Core Location
 * MapKit
+
+## UI Elements
+
+* [Search Bar](SwiftProjects/TableAndSearch)
+
+
