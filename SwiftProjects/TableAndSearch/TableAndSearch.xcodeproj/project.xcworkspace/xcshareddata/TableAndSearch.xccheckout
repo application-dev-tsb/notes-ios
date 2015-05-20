@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E824E864-3C06-4815-AA82-E6B70FD0B3D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>276FF5D867366AD4F2360BEE2E7C8A06A101A721</key>
+		<string>https://github.com/hack-of-all-codes/NotesIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftProjects/TableAndSearch/TableAndSearch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>276FF5D867366AD4F2360BEE2E7C8A06A101A721</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hack-of-all-codes/NotesIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>276FF5D867366AD4F2360BEE2E7C8A06A101A721</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>276FF5D867366AD4F2360BEE2E7C8A06A101A721</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NotesIOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
