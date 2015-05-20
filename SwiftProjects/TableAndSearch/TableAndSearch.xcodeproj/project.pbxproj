@@ -13,6 +13,7 @@
 		E9A37C4F1B0C233200D5FD81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A37C4E1B0C233200D5FD81 /* Images.xcassets */; };
 		E9A37C521B0C233200D5FD81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9A37C501B0C233200D5FD81 /* LaunchScreen.xib */; };
 		E9A37C5E1B0C233200D5FD81 /* TableAndSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A37C5D1B0C233200D5FD81 /* TableAndSearchTests.swift */; };
+		E9A37C691B0C24F100D5FD81 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A37C681B0C24F100D5FD81 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E9A37C571B0C233200D5FD81 /* TableAndSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableAndSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A37C5C1B0C233200D5FD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A37C5D1B0C233200D5FD81 /* TableAndSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAndSearchTests.swift; sourceTree = "<group>"; };
+		E9A37C681B0C24F100D5FD81 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E9A37C411B0C233200D5FD81 /* TableAndSearch */ = {
 			isa = PBXGroup;
 			children = (
+				E9A37C681B0C24F100D5FD81 /* TableViewController.swift */,
 				E9A37C4B1B0C233200D5FD81 /* Main.storyboard */,
 				E9A37C421B0C233200D5FD81 /* Supporting Files */,
 			);
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A37C481B0C233200D5FD81 /* TableAndSearch.xcdatamodeld in Sources */,
+				E9A37C691B0C24F100D5FD81 /* TableViewController.swift in Sources */,
 				E9A37C451B0C233200D5FD81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
