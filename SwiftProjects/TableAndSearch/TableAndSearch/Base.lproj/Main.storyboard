@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8zw-qb-Xor">
             <objects>
-                <navigationController hidesBarsOnTap="YES" hidesBarsWhenVerticallyCompact="YES" id="TRb-JI-M54" sceneMemberID="viewController">
+                <navigationController id="TRb-JI-M54" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="91j-ji-7ze">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,20 +27,23 @@
         <scene sceneID="ptX-L3-dBz">
             <objects>
                 <tableViewController title="Numbers" hidesBottomBarWhenPushed="YES" id="xbK-fP-M5N" customClass="TableViewController" customModule="TableAndSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Den-rM-H70">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Den-rM-H70">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search for Odd Numbers..." id="J3b-kD-oKY">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xW6-1O-g3R">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Zk6-Kb-Kp2" style="IBUITableViewCellStyleDefault" id="xW6-1O-g3R">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xW6-1O-g3R" id="HMi-Q8-jSo">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="My Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zk6-Kb-Kp2">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -50,20 +53,20 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="IBf-9u-1pv">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="BdU-eV-eDh">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Odd"/>
-                                <segment title="Even"/>
-                                <segment title="All"/>
-                            </segments>
-                        </segmentedControl>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Numbers" id="IBf-9u-1pv"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="W2Y-N3-vr0" id="g37-sI-Dr2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIZ-JQ-6ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="W2Y-N3-vr0">
+                    <connections>
+                        <outlet property="delegate" destination="xbK-fP-M5N" id="obc-EM-cUC"/>
+                        <outlet property="searchContentsController" destination="xbK-fP-M5N" id="PDD-oB-UTd"/>
+                        <outlet property="searchResultsDataSource" destination="xbK-fP-M5N" id="YIL-ra-NlI"/>
+                        <outlet property="searchResultsDelegate" destination="xbK-fP-M5N" id="x8f-0S-WkS"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-19" y="450"/>
         </scene>
