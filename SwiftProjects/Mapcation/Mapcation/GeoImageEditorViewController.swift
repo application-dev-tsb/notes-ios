@@ -12,10 +12,13 @@ import CoreLocation
 class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate {
 
     //MARK: - Outlets
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var searchLocationButton: UIBarButtonItem!
     
     //MARK: - Variables
     
@@ -56,13 +59,15 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate 
         
         switch CLLocationManager.authorizationStatus() {
         case .AuthorizedWhenInUse, .AuthorizedAlways:
+            showError(nil)
             locationManager.startUpdatingLocation()
         case .NotDetermined:
+            showError(nil)
             locationManager.requestWhenInUseAuthorization()
-        case .Denied, .Restricted:
-            latitudeTextField.text = ""
-            longitudeTextField.text = ""
-            location = nil
+        case .Denied:
+            showError("ERROR: Denied")
+        case .Restricted:
+            showError("ERROR: Restricted")
         }
     }
     
@@ -74,16 +79,34 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate 
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         switch status {
         case .AuthorizedWhenInUse, .AuthorizedAlways:
-            locationManager.startUpdatingLocation()
-        case .NotDetermined, .Denied, .Restricted:
-            latitudeTextField.text = ""
-            longitudeTextField.text = ""
-            location = nil
+            showError(nil)
+            manager.startUpdatingLocation()
+        case .NotDetermined:
+            showError(nil)
+            manager.requestWhenInUseAuthorization()
+        case .Denied:
+            showError("ERROR: Denied")
+        case .Restricted:
+            showError("ERROR: Restricted")
         }
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
         location = newLocation
+        manager.stopUpdatingLocation()
+        searchLocationButton.enabled = true
+        
     }
     
+    //MARK: -
+    
+    private func showError(error: String?) {
+        if let message = error {
+            errorLabel.text = message
+            errorLabel.hidden = false
+        } else {
+            errorLabel.text = ""
+            errorLabel.hidden = true
+        }
+    }
 }

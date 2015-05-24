@@ -104,9 +104,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR: Something went wrong" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-q7-i8b">
+                                <rect key="frame" x="16" y="361" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pcb-q7-i8b" firstAttribute="trailing" secondItem="atN-nf-AQH" secondAttribute="trailingMargin" id="9Ip-cq-aPv"/>
                             <constraint firstItem="jeh-hY-d3a" firstAttribute="top" secondItem="B2o-Q8-Hnf" secondAttribute="bottom" constant="13" id="9dP-cn-fuD"/>
                             <constraint firstItem="0nX-9N-toG" firstAttribute="width" secondItem="Aet-Ue-Hy8" secondAttribute="width" id="GWG-Ku-oHp"/>
                             <constraint firstItem="0nX-9N-toG" firstAttribute="leading" secondItem="Aet-Ue-Hy8" secondAttribute="trailing" constant="8" symbolic="YES" id="L6e-MZ-o67"/>
@@ -115,7 +122,9 @@
                             <constraint firstItem="Aet-Ue-Hy8" firstAttribute="leading" secondItem="atN-nf-AQH" secondAttribute="leadingMargin" id="NzK-jv-snf"/>
                             <constraint firstItem="jeh-hY-d3a" firstAttribute="trailing" secondItem="atN-nf-AQH" secondAttribute="trailingMargin" id="ONV-sh-tVw"/>
                             <constraint firstItem="Aet-Ue-Hy8" firstAttribute="top" secondItem="jeh-hY-d3a" secondAttribute="bottom" constant="8" id="SPI-7b-ePt"/>
+                            <constraint firstItem="Pcb-q7-i8b" firstAttribute="leading" secondItem="atN-nf-AQH" secondAttribute="leadingMargin" id="WVs-Tg-h14"/>
                             <constraint firstItem="B2o-Q8-Hnf" firstAttribute="top" secondItem="Tzs-Nb-8bD" secondAttribute="bottom" constant="8" id="aHE-zL-4L4"/>
+                            <constraint firstItem="Pcb-q7-i8b" firstAttribute="top" secondItem="Aet-Ue-Hy8" secondAttribute="bottom" constant="8" id="fAt-2e-0dH"/>
                             <constraint firstItem="0nX-9N-toG" firstAttribute="centerY" secondItem="Aet-Ue-Hy8" secondAttribute="centerY" id="mCP-tF-0RM"/>
                             <constraint firstItem="jeh-hY-d3a" firstAttribute="leading" secondItem="atN-nf-AQH" secondAttribute="leadingMargin" id="r53-Rq-t2J"/>
                         </constraints>
@@ -143,9 +152,11 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="4aH-aX-0Fb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="Pcb-q7-i8b" id="W0Y-B9-t7s"/>
                         <outlet property="imageView" destination="B2o-Q8-Hnf" id="zbc-P8-t9i"/>
                         <outlet property="latitudeTextField" destination="Aet-Ue-Hy8" id="7Hw-3W-kOj"/>
                         <outlet property="longitudeTextField" destination="0nX-9N-toG" id="DZR-dL-NMN"/>
+                        <outlet property="searchLocationButton" destination="Ydz-pj-GOA" id="LUS-qE-Lp9"/>
                         <outlet property="titleTextField" destination="jeh-hY-d3a" id="Gpn-fu-8OF"/>
                     </connections>
                 </viewController>
