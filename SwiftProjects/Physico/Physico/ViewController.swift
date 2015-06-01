@@ -14,13 +14,7 @@ class ViewController: UIViewController {
     
     private let numberOfBlocks = 10
     
-    private let gravity = UIGravityBehavior()
-    
-    private lazy var collider: UICollisionBehavior = {
-        let lazyCollider = UICollisionBehavior()
-        lazyCollider.translatesReferenceBoundsIntoBoundary = true
-        return lazyCollider
-    }()
+    private var dropItBehavior = DropItBehavior()
     
     private lazy var animator: UIDynamicAnimator = {
         return UIDynamicAnimator(referenceView: self.gameView)
@@ -28,8 +22,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        animator.addBehavior(gravity)
-        animator.addBehavior(collider)
+        animator.addBehavior(dropItBehavior)
     }
 
     @IBAction func tap(sender: UITapGestureRecognizer) {
@@ -47,8 +40,7 @@ class ViewController: UIViewController {
         
         gameView.addSubview(dropView)
         
-        gravity.addItem(dropView)
-        collider.addItem(dropView)
+        dropItBehavior.addDrop(dropView)
     }
 
 }

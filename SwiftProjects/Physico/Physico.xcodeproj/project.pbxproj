@@ -13,6 +13,7 @@
 		E99CD33E1B1BFA9300126415 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99CD33D1B1BFA9300126415 /* Images.xcassets */; };
 		E99CD3411B1BFA9300126415 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99CD33F1B1BFA9300126415 /* LaunchScreen.xib */; };
 		E99CD34D1B1BFA9300126415 /* PhysicoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99CD34C1B1BFA9300126415 /* PhysicoTests.swift */; };
+		E99CD3571B1C10D800126415 /* DropItBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99CD3561B1C10D800126415 /* DropItBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E99CD3461B1BFA9300126415 /* PhysicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99CD34B1B1BFA9300126415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99CD34C1B1BFA9300126415 /* PhysicoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicoTests.swift; sourceTree = "<group>"; };
+		E99CD3561B1C10D800126415 /* DropItBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,9 @@
 		E99CD3331B1BFA9300126415 /* Physico */ = {
 			isa = PBXGroup;
 			children = (
-				E99CD3361B1BFA9300126415 /* AppDelegate.swift */,
+				E99CD3561B1C10D800126415 /* DropItBehavior.swift */,
 				E99CD3381B1BFA9300126415 /* ViewController.swift */,
 				E99CD33A1B1BFA9300126415 /* Main.storyboard */,
-				E99CD33D1B1BFA9300126415 /* Images.xcassets */,
-				E99CD33F1B1BFA9300126415 /* LaunchScreen.xib */,
 				E99CD3341B1BFA9300126415 /* Supporting Files */,
 			);
 			path = Physico;
@@ -90,6 +90,9 @@
 		E99CD3341B1BFA9300126415 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E99CD33D1B1BFA9300126415 /* Images.xcassets */,
+				E99CD33F1B1BFA9300126415 /* LaunchScreen.xib */,
+				E99CD3361B1BFA9300126415 /* AppDelegate.swift */,
 				E99CD3351B1BFA9300126415 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -214,6 +217,7 @@
 			files = (
 				E99CD3391B1BFA9300126415 /* ViewController.swift in Sources */,
 				E99CD3371B1BFA9300126415 /* AppDelegate.swift in Sources */,
+				E99CD3571B1C10D800126415 /* DropItBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				E99CD3521B1BFA9300126415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E99CD3531B1BFA9300126415 /* Build configuration list for PBXNativeTarget "PhysicoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				E99CD3551B1BFA9300126415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
