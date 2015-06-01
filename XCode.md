@@ -1,9 +1,15 @@
 # XCode
 
-- Deleting a line
+### Deleting a line
 ```
 CTRL + A
 CTRL + K
 ```
-- Select Nested View from Storyboard (CTL + SHIFT + CLICK)
+### Select Nested View from Storyboard (CTL + SHIFT + CLICK)
 ![Select Nested Views](/Images/XCode/SelectNestedViews.png)
+
+### Selecting a File to Display on Side-by-Side View
+```
+CLICK = select for left side
+ALT + CLICK = select for right side
+```
