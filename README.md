@@ -18,7 +18,7 @@ My iOS Notes, In case i get amnesia
 * Autolayout
 * ScrollView
 * Multithreading
-* Dynamic Animation
+* [Dynamic Animation](/DynamicAnimation.md)
 * Core Motion
 * Core Location
 * MapKit
