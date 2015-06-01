@@ -13,13 +13,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var gameView: UIView!
     
     private let numberOfBlocks = 10
+    
+    private let gravity = UIGravityBehavior()
+    
+    private lazy var collider: UICollisionBehavior = {
+        let lazyCollider = UICollisionBehavior()
+        lazyCollider.translatesReferenceBoundsIntoBoundary = true
+        return lazyCollider
+    }()
+    
+    private lazy var animator: UIDynamicAnimator = {
+        return UIDynamicAnimator(referenceView: self.gameView)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        animator.addBehavior(gravity)
+        animator.addBehavior(collider)
     }
 
     @IBAction func tap(sender: UITapGestureRecognizer) {
@@ -36,6 +46,9 @@ class ViewController: UIViewController {
         dropView.backgroundColor = UIColor.random
         
         gameView.addSubview(dropView)
+        
+        gravity.addItem(dropView)
+        collider.addItem(dropView)
     }
 
 }
