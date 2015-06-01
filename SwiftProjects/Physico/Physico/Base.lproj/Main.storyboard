@@ -21,9 +21,16 @@
                             <outletCollection property="gestureRecognizers" destination="ufF-S7-PQx" appends="YES" id="FeQ-rD-7Y4"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="kh9-bI-dsS" id="ETh-va-csf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ufF-S7-PQx"/>
+                <tapGestureRecognizer id="ufF-S7-PQx">
+                    <connections>
+                        <action selector="tap:" destination="vXZ-lx-hvc" id="6y9-dY-ql2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

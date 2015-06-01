@@ -9,17 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var gameView: UIView!
+    
+    private let numberOfBlocks = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func tap(sender: UITapGestureRecognizer) {
+        addBlock()
+    }
+    
+    func addBlock() {
+        var size = gameView.bounds.size.width / CGFloat(numberOfBlocks)
+        var dropSize = CGSize(width: size, height: size)
+        var frame = CGRect(origin: CGPointZero, size: dropSize)
+        frame.origin.x = CGFloat.random(numberOfBlocks) * dropSize.width
+        
+        var dropView = UIView(frame: frame)
+        dropView.backgroundColor = UIColor.random
+        
+        gameView.addSubview(dropView)
+    }
 
 }
 
+private extension CGFloat {
+    static func random(max: Int) -> CGFloat {
+        return CGFloat(arc4random() % UInt32(max))
+    }
+}
+
+private extension UIColor {
+    class var random: UIColor {
+        switch arc4random()%5 {
+        case 0: return UIColor.greenColor()
+        case 1: return UIColor.blueColor()
+        case 2: return UIColor.orangeColor()
+        case 3: return UIColor.redColor()
+        case 4: return UIColor.purpleColor()
+        default: return UIColor.blackColor()
+        }
+    }
+}
