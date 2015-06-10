@@ -2,8 +2,8 @@
 
 ### Deleting a line
 ```
-CTRL + A
-CTRL + K
+CTRL + A = Go to Start of Line
+CTRL + K = Delete Everything on the Right
 ```
 ### Select Nested View from Storyboard (CTL + SHIFT + CLICK)
 ![Select Nested Views](/Images/XCode/SelectNestedViews.png)
