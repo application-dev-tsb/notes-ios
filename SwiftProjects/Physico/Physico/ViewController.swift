@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIDynamicAnimatorDelegate {
             var rowIsComplete = true
             
             for _ in 0 ..< numberOfBlocks {
-                var hitPoint = CGPoint(x: dropFrame.midX, y:dropFrame.minY)
+                var hitPoint = CGPoint(x: dropFrame.midX, y:dropFrame.midY)
                 //UIView.hitTest
                 //thanks for this awesome method
                 //hits the topmost view on that coordinate
