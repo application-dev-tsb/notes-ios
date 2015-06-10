@@ -13,3 +13,8 @@ CTRL + K
 CLICK = select for left side
 ALT + CLICK = select for right side
 ```
+
+### File Navigation
+```
+COMMAND + L = Go to Line Number
+```
