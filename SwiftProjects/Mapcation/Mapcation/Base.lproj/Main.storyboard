@@ -149,9 +149,14 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Add  Geo-Image" id="aqH-RM-0YF">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="4aH-aX-0Fb"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="4aH-aX-0Fb">
+                            <connections>
+                                <action selector="done:" destination="80d-SH-0Ex" id="kHa-1d-VTO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="4aH-aX-0Fb" id="xSs-ac-pGm"/>
                         <outlet property="errorLabel" destination="Pcb-q7-i8b" id="W0Y-B9-t7s"/>
                         <outlet property="imageView" destination="B2o-Q8-Hnf" id="zbc-P8-t9i"/>
                         <outlet property="latitudeTextField" destination="Aet-Ue-Hy8" id="7Hw-3W-kOj"/>

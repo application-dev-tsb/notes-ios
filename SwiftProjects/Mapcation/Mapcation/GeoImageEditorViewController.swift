@@ -19,6 +19,7 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
     @IBOutlet weak var longitudeTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var searchLocationButton: UIBarButtonItem!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     //MARK: - Variables
     
@@ -34,6 +35,7 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
                 latitudeTextField.text = location?.coordinate.latitude.description
                 longitudeTextField.text = location?.coordinate.longitude.description
             }
+            refreshDoneStatus()
         }
     }
     
@@ -87,12 +89,22 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
         }
     }
     
+    @IBAction func done(sender: UIBarButtonItem) {
+        if isValidGeoImage() {
+            println("Image: \(imageView.image) Location:\(location) Text:\(titleTextField.text)")
+        } else {
+            refreshDoneStatus()
+        }
+    }
+    
     //MARK: - UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+
         if let myImage = image {
             imageView.image = myImage
         }
+        refreshDoneStatus()
         
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -127,7 +139,35 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
         return false
     }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        refreshDoneStatus()
+    }
+    
     //MARK: -
+    
+    private func isValidGeoImage() -> Bool {
+        var isValid = true;
+        
+        if let titleTextIsEmpty = titleTextField.text?.isEmpty {
+            isValid = !titleTextIsEmpty
+        } else {
+            isValid = false
+        }
+        
+        if location == nil {
+            isValid = false
+        }
+        
+        if imageView.image == nil {
+            isValid = false
+        }
+        
+        return isValid
+    }
+    
+    private func refreshDoneStatus() {
+        doneButton.enabled = isValidGeoImage()
+    }
     
     private func showError(error: String?) {
         if let message = error {
