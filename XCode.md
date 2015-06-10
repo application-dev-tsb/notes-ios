@@ -14,7 +14,11 @@ CLICK = select for left side
 ALT + CLICK = select for right side
 ```
 
-### File Navigation
+### Line Navigation
 ```
 COMMAND + L = Go to Line Number
+
+//move lines up or down
+ALT + COMMAN + [ 
+ALT + COMMAND + ]
 ```
