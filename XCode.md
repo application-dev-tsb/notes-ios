@@ -19,6 +19,6 @@ ALT + CLICK = select for right side
 COMMAND + L = Go to Line Number
 
 //move lines up or down
-ALT + COMMAN + [ 
-ALT + COMMAND + ]
+ALT + COMMAND + [ = up
+ALT + COMMAND + ] = down
 ```
