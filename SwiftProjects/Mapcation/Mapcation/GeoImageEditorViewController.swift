@@ -78,6 +78,7 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
     @IBAction func setImageFromGallery(sender: UIBarButtonItem) {
         if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
             imagePicker.sourceType = .SavedPhotosAlbum
+            imagePicker.allowsEditing = false
             
             presentViewController(imagePicker, animated: true, completion: nil)
         } else {
@@ -88,8 +89,8 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
     //MARK: - UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        if let pickedImage = editingInfo[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = pickedImage
+        if let myImage = image {
+            imageView.image = myImage
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)
