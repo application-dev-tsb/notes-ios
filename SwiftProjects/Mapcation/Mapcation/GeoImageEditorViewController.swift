@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     //MARK: - Outlets
     
@@ -45,6 +45,7 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        titleTextField.delegate = self
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -117,6 +118,13 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate,
         location = newLocation
         manager.stopUpdatingLocation()
         searchLocationButton.enabled = true
+    }
+    
+    //MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
     
     //MARK: -
