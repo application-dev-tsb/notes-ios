@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate {
+class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: - Outlets
     
@@ -37,10 +37,14 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate 
         }
     }
     
+    let imagePicker = UIImagePickerController()
+    
     //MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -72,6 +76,23 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     @IBAction func setImageFromGallery(sender: UIBarButtonItem) {
+        if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
+            imagePicker.sourceType = .SavedPhotosAlbum
+            
+            presentViewController(imagePicker, animated: true, completion: nil)
+        } else {
+            showError("ERROR: Photo Album is not Accessible")
+        }
+    }
+    
+    //MARK: - UIImagePickerControllerDelegate
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        if let pickedImage = editingInfo[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = pickedImage
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //MARK: - CLLocationManagerDelegate
@@ -95,7 +116,6 @@ class GeoImageEditorViewController: UIViewController, CLLocationManagerDelegate 
         location = newLocation
         manager.stopUpdatingLocation()
         searchLocationButton.enabled = true
-        
     }
     
     //MARK: -
