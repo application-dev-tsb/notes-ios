@@ -1,5 +1,4 @@
-# NotesIOS
-My iOS Notes, In case i get amnesia 
+# iOS
 ![iOS 8](/Images/iOS8Banner.jpeg)
 
 ## Tools
