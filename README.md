@@ -64,3 +64,5 @@
 
 ## Others
 * [Comments](/Comments.md)
+
+Source: [Apple Inc. iOS Resources](https://developer.apple.com/library/ios/documentation/Miscellaneous/Conceptual/iPhoneOSTechOverview/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007898-CH1-SW1)
