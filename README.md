@@ -2,8 +2,12 @@
 My iOS Notes, In case i get amnesia 
 ![iOS 8](/Images/iOS8Banner.jpeg)
 
+### Tools
 * [XCode](/XCode.md)
-* [Comments](/Comments.md)
+* Test
+* Instruments
+
+### Cocoa Touch
 * MVC
 * Foundation
 * View
@@ -23,8 +27,36 @@ My iOS Notes, In case i get amnesia
 * Core Location
 * MapKit
 
-## UI Elements
+### Core Services
+* Networking
+* Location
+* SQLite
+* File Access
+* Threading
+* Net Services
+* Address Book
 
+### Media
+* Core Audio
+* OpenAL
+* Audio Mixing
+* Audio Recording
+* Video Playback
+* OpenGL ES
+* Quartz (2D)
+* PDF
+
+### Core OS
+* OSX Kernel
+* Sockets
+* Security
+* Certificates
+* Keychain
+* Bonjour
+* Power Management
+
+### UI Elements
 * [Search Bar](SwiftProjects/TableAndSearch)
 
-
+### Others
+* [Comments](/Comments.md)
