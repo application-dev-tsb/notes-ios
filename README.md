@@ -26,8 +26,6 @@
 * Core Location
 * MapKit
 * [Internationalization and Localization](/InternationalizationAndLocalization.md)
-
-#### iOS 9
 * Multitasking
 
 ## Watch OS
