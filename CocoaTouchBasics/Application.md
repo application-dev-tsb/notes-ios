@@ -6,3 +6,6 @@ The app delegate performs several crucial roles:
 * It determines whether state preservation and restoration should occur and assists in the preservation and restoration process as needed.
 * It responds to events that target the app itself and are not specific to your app’s views or view controllers.
 * You can use it to store your app’s central data objects or any content that does not have an owning view controller.
+
+**Source:**
+* [Apple Developers: UIApplicationDelegate](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/) 
