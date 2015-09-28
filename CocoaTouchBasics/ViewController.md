@@ -1,15 +1,20 @@
 # View Controller
 Two Types of View Controllers:
-* Content VC
-* Containter VC - has child VCs
+
+**Container View Controller:**
+* UINavigationController
+* UISplitViewController
+* UIPageViewController
+
+**Content View Controllers:**
+* UITableViewController
+* UICollectionViewController
+* UIViewController
 
 ## Root View Controller
 The root view controller is the anchor of the view controller hierarchy. Every window has exactly one root view controller whose content fills that window
 
-## Container View Controller
-* UINavigationController
-* UISplitViewController
-* UIPageViewController
+
 
 [Implementing a Container View Controller](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html#//apple_ref/doc/uid/TP40007457-CH11-SW1)
 
