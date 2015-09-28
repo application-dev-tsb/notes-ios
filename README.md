@@ -14,8 +14,8 @@
 * [View](/CocoaTouchBasics/View.md)
 * [View Controller](/CocoaTouchBasics/ViewController.md)
 * [Application](/CocoaTouchBasics/Application.md)
-* Gestures
-* Segue
+* [Gestures](/CocoaTouchBasics/Gestures.md)
+* [Segue](/CocoaTouchBasics/Segue.md)
 * Autolayout
 * ScrollView
 * [Dynamic Animation](/CocoaTouchBasics/DynamicAnimation.md)
