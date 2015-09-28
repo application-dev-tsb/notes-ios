@@ -26,7 +26,9 @@
 * Core Location
 * MapKit
 * [Internationalization and Localization](/InternationalizationAndLocalization.md)
-* Multitasking
+* [3D Touch](https://developer.apple.com/ios/3d-touch/)
+* [Multitasking](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html)
+* [Search](https://developer.apple.com/library/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)
 
 ## Watch OS
 
