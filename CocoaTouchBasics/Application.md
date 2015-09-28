@@ -14,6 +14,16 @@ The app delegate performs several crucial roles:
 * Open a URL that was sent to your app
 * Provide the root window object for your app. Technically, the app delegate provided by Xcode already implements the window property, so you do not have to do anything special here unless you want to customize your app’s window.
 
+## Responding to Notifications and Events
+* When a remote notification arrives
+* When a local notification fire
+* When the user taps a custom action in the alert for a remote or local notification’s
+* For apps that want to initiate background downloads
+* For apps that use the NSURLSession class to perform background downloads
+* low-memory condition
+* significant change in time
+* user locks the device (protected files)
+
 ## Managing State Transition
 ![State Transition Diagram](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/Art/high_level_flow_2x.png)
 
