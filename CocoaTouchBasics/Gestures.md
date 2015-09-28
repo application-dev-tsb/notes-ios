@@ -84,6 +84,11 @@ This step includes assigning a target, action, and sometimes assigning gesture-s
 ```
 * Implement the action method that handles the gesture.
 
+## Interacting with Other Gesture Recognizers
+A view can have more than one gesture recognizer attached to it. When a view has multiple gesture recognizers attached to it, you may want to alter how the competing gesture recognizers receive and analyze touch events:
+* Declaring a Specific Order for Two Gesture Recognizers
+* Preventing Gesture Recognizers from Analyzing Touches
+* Permitting Simultaneous Gesture Recognition
 
 **Source:**
 * [Apple Developers: Gesture Recognizers](https://developer.apple.com/library/prerelease/watchos/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizer_basics/GestureRecognizer_basics.html#//apple_ref/doc/uid/TP40009541-CH2-SW2)
