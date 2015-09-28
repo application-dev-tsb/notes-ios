@@ -20,7 +20,7 @@ When you present a view controller, UIKit creates a relationship between the pre
 
 ## Adapativity and Size Changes
 ![Adaptive Model](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG_AdaptiveModel_13-1_2x.png)
-[Source](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html#//apple_ref/doc/uid/TP40007457-CH19-SW1)
+[The Adaptive Model](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html#//apple_ref/doc/uid/TP40007457-CH19-SW1)
 
 **Sources:**
 * [Apple Developer: View Programming Guide for iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457)
