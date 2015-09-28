@@ -21,6 +21,8 @@
 * [Internationalization and Localization](/CocoaTouchBasics/InternationalizationAndLocalization.md)
 
 ## Watch OS
+* [WatchKit](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
+* [ClockKit](https://developer.apple.com/library/watchos/documentation/ClockKit/Reference/ClockKit_framework/index.html#//apple_ref/doc/uid/TP40016082)
 
 ## Core Services
 * Networking
