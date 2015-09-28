@@ -20,3 +20,4 @@ When you present a view controller, UIKit creates a relationship between the pre
 
 **Sources:**
 * [Apple Developer: View Programming Guide for iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457)
+* [Apple Developers: Design Tips for View Controllers](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/DesignTips.html#//apple_ref/doc/uid/TP40007457-CH5-SW1)
