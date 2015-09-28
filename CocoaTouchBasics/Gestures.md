@@ -87,6 +87,13 @@ This step includes assigning a target, action, and sometimes assigning gesture-s
 ## Interacting with Other Gesture Recognizers
 A view can have more than one gesture recognizer attached to it. When a view has multiple gesture recognizers attached to it, you may want to alter how the competing gesture recognizers receive and analyze touch events:
 * Declaring a Specific Order for Two Gesture Recognizers
+```objectivec
+- (void)viewDidLoad {
+       [super viewDidLoad];
+       // Do any additional setup after loading the view, typically from a nib
+       [self.panRecognizer requireGestureRecognizerToFail:self.swipeRecognizer];
+}
+```
 * Preventing Gesture Recognizers from Analyzing Touches
 * Permitting Simultaneous Gesture Recognition
 
