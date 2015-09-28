@@ -13,4 +13,5 @@ The Model-View-Controller (MVC) design pattern assigns objects in an application
 * can respond to user action
 
 ## Controller
+* intermediary between models and views
 
