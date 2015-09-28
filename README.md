@@ -11,19 +11,14 @@
 * [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
 * [View](/CocoaTouchBasics/View.md)
-* ViewController Lifecycle
-* Application Lifecycle
-* Protocols and Delegation
+* View Controller
+* Application
 * Gestures
-* NavigationController
-* TabBarController
-* SplitViewController
 * Segue
 * Autolayout
 * ScrollView
-* Multithreading
-* [Dynamic Animation](/DynamicAnimation.md)
-* [Internationalization and Localization](/InternationalizationAndLocalization.md)
+* [Dynamic Animation](/CocoaTouchBasics/DynamicAnimation.md)
+* [Internationalization and Localization](/CocoaTouchBasics/InternationalizationAndLocalization.md)
 
 ## Watch OS
 
