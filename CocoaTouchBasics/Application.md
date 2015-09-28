@@ -14,5 +14,8 @@ The app delegate performs several crucial roles:
 * Open a URL that was sent to your app
 * Provide the root window object for your app. Technically, the app delegate provided by Xcode already implements the window property, so you do not have to do anything special here unless you want to customize your app’s window.
 
+## Managing State Transition
+![State Transition Diagram](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/Art/high_level_flow_2x.png)
+
 **Source:**
 * [Apple Developers: UIApplicationDelegate](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/) 
