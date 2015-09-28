@@ -9,7 +9,56 @@ The UIKit framework provides predefined gesture recognizers that detect common g
 
 ## Discrete and Continuous Gestures
 * A discrete gesture, such as a tap, occurs once
+```objectivec
+// Respond to a swipe gesture
+- (IBAction)showGestureForSwipeRecognizer:(UISwipeGestureRecognizer *)recognizer {
+       // Get the location of the gesture
+       CGPoint location = [recognizer locationInView:self.view];
+ 
+       // Display an image view at that location
+       [self drawImageForGestureRecognizer:recognizer atPoint:location];
+ 
+       // If gesture is a left swipe, specify an end location
+       // to the left of the current location
+       if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+            location.x -= 220.0;
+       } else {
+            location.x += 220.0;
+       }
+ 
+       // Animate the image view in the direction of the swipe as it fades out
+       [UIView animateWithDuration:0.5 animations:^{
+            self.imageView.alpha = 0.0;
+            self.imageView.center = location;
+       }];
+}
+```
 * A continuous gesture, such as pinching, takes place over a period of time
+```objectivec
+// Respond to a rotation gesture
+- (IBAction)showGestureForRotationRecognizer:(UIRotationGestureRecognizer *)recognizer {
+       // Get the location of the gesture
+       CGPoint location = [recognizer locationInView:self.view];
+ 
+       // Set the rotation angle of the image view to
+       // match the rotation of the gesture
+       CGAffineTransform transform = CGAffineTransformMakeRotation([recognizer rotation]);
+       self.imageView.transform = transform;
+ 
+       // Display an image view at that location
+       [self drawImageForGestureRecognizer:recognizer atPoint:location];
+ 
+      // If the gesture has ended or is canceled, begin the animation
+      // back to horizontal and fade out
+      if (([recognizer state] == UIGestureRecognizerStateEnded) || ([recognizer state] == UIGestureRecognizerStateCancelled)) {
+           [UIView animateWithDuration:0.5 animations:^{
+                self.imageView.alpha = 0.0;
+                self.imageView.transform = CGAffineTransformIdentity;
+           }];
+      }
+ 
+}
+```
 
 ## Responding to Events with Gesture Recognizers
 There are three things you do to add a built-in gesture recognizer to your app:
