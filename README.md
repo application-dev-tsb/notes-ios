@@ -2,7 +2,7 @@
 ![iOS 9](/Images/iOS9Banner.jpg)
 
 ## Tools
-* [XCode](/XCode.md)
+* [XCode](/Tools/XCode.md)
 * [App Thinning](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html)
 * Test
 * Instruments
@@ -11,7 +11,7 @@
 * [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
 * [View](/CocoaTouchBasics/View.md)
-* View Controller
+* [View Controller](/CocoaTouchBasics/ViewController.md)
 * Application
 * Gestures
 * Segue
