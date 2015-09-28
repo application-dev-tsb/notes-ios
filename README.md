@@ -10,7 +10,7 @@
 ## Cocoa Touch Basics
 * [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
-* View
+* [View](/CocoaTouchBasics/View.md)
 * ViewController Lifecycle
 * Application Lifecycle
 * Protocols and Delegation
