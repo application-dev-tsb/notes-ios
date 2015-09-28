@@ -8,7 +8,7 @@
 * Instruments
 
 ## Cocoa Touch Basics
-* MVC
+* [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
 * View
 * ViewController Lifecycle
