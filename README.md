@@ -7,7 +7,8 @@
 * Test
 * Instruments
 
-## Cocoa Touch Basics
+## aCocoa Touch Basics
+* [App Architecture](https://developer.apple.com/library/prerelease/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007072)
 * [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
 * [View](/CocoaTouchBasics/View.md)
