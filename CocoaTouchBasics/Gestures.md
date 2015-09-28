@@ -16,6 +16,23 @@ There are three things you do to add a built-in gesture recognizer to your app:
 * Create and configure a gesture recognizer instance.
 This step includes assigning a target, action, and sometimes assigning gesture-specific attributes (such as the numberOfTapsRequired).
 * Attach the gesture recognizer to a view.
+```objectivec
+- (void)viewDidLoad {
+     [super viewDidLoad];
+ 
+     // Create and initialize a tap gesture
+     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc]
+          initWithTarget:self action:@selector(respondToTapGesture:)];
+ 
+     // Specify that the gesture must be a single tap
+     tapRecognizer.numberOfTapsRequired = 1;
+ 
+     // Add the tap gesture recognizer to the view
+     [self.view addGestureRecognizer:tapRecognizer];
+ 
+     // Do any additional setup after loading the view, typically from a nib
+}
+```
 * Implement the action method that handles the gesture.
 
 
