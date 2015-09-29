@@ -37,5 +37,8 @@ A segue defines a transition between two view controllers in your app’s storyb
 }
 ```
 
+## Transition Animation
+[More Info...](https://developer.apple.com/library/prerelease/ios/featuredarticles/ViewControllerPGforiPhoneOS/CustomizingtheTransitionAnimations.html#//apple_ref/doc/uid/TP40007457-CH16-SW1)
+
 **Sources:**
 * [Apple Developers: Using Segue](https://developer.apple.com/library/prerelease/ios/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
