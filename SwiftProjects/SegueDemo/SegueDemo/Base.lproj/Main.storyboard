@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVC-eX-ptd">
+                                <rect key="frame" x="265" y="289" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="oAO-GP-TvV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViC-BM-v8k">
+                                <rect key="frame" x="529" y="28" width="51" height="30"/>
+                                <state key="normal" title="Go to B"/>
+                                <connections>
+                                    <segue destination="F6P-9N-Px1" kind="show" id="L1v-2N-2Y1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mVC-eX-ptd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J32-0o-xvE"/>
+                            <constraint firstItem="ViC-BM-v8k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zw3-Zz-8Dw"/>
+                            <constraint firstItem="mVC-eX-ptd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="eZV-ID-l7b"/>
+                            <constraint firstItem="mVC-eX-ptd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pY4-VW-25h"/>
+                            <constraint firstItem="ViC-BM-v8k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rgp-iI-mM6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RRW-7r-JUN">
+            <objects>
+                <viewController id="F6P-9N-Px1" customClass="BViewController" customModule="SegueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O7Q-BV-t7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Pz-0G-wjj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2JI-kb-0Rq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-GE-NGZ">
+                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="z7C-XH-nuY" kind="unwind" unwindAction="myUnwindActionA:" id="Ev0-U7-xgO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-I1-rpc">
+                                <rect key="frame" x="266" y="289" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-s5-OFL">
+                                <rect key="frame" x="528" y="28" width="52" height="30"/>
+                                <state key="normal" title="Go to C"/>
+                                <connections>
+                                    <segue destination="zmN-Ol-StF" kind="show" id="I9d-mp-sjG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FRx-GE-NGZ" firstAttribute="leading" secondItem="2JI-kb-0Rq" secondAttribute="leadingMargin" id="676-IC-EAd"/>
+                            <constraint firstItem="boZ-I1-rpc" firstAttribute="centerX" secondItem="2JI-kb-0Rq" secondAttribute="centerX" id="BRC-UU-RqD"/>
+                            <constraint firstItem="boZ-I1-rpc" firstAttribute="top" secondItem="O7Q-BV-t7a" secondAttribute="bottom" constant="269" id="Jax-Na-pbz"/>
+                            <constraint firstItem="Mwg-s5-OFL" firstAttribute="top" secondItem="O7Q-BV-t7a" secondAttribute="bottom" constant="8" symbolic="YES" id="sBJ-J6-uUJ"/>
+                            <constraint firstItem="Mwg-s5-OFL" firstAttribute="trailing" secondItem="2JI-kb-0Rq" secondAttribute="trailingMargin" id="vU4-Ip-TB5"/>
+                            <constraint firstItem="FRx-GE-NGZ" firstAttribute="top" secondItem="O7Q-BV-t7a" secondAttribute="bottom" id="y2T-gg-iMM"/>
+                            <constraint firstItem="boZ-I1-rpc" firstAttribute="centerY" secondItem="2JI-kb-0Rq" secondAttribute="centerY" id="zRS-Go-KC9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGe-SO-ywa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z7C-XH-nuY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="380"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wXk-em-V51">
+            <objects>
+                <viewController id="zmN-Ol-StF" customClass="CViewController" customModule="SegueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vti-3K-Rt4"/>
+                        <viewControllerLayoutGuide type="bottom" id="9u3-V6-Xi6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAs-7N-HfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XT-XL-ZSC">
+                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="GX4-aY-5q9" kind="unwind" unwindAction="myUnwindActionB:" id="r8S-rZ-m7y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSK-LD-sGe">
+                                <rect key="frame" x="495" y="20" width="85" height="30"/>
+                                <state key="normal" title="Dismiss to A"/>
+                                <connections>
+                                    <segue destination="GX4-aY-5q9" kind="unwind" unwindAction="myUnwindActionA:" id="Tbq-Ec-u9H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMW-D4-Eis">
+                                <rect key="frame" x="265" y="289" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mSK-LD-sGe" firstAttribute="trailing" secondItem="GAs-7N-HfZ" secondAttribute="trailingMargin" id="3Nm-qm-nvR"/>
+                            <constraint firstItem="BMW-D4-Eis" firstAttribute="centerY" secondItem="GAs-7N-HfZ" secondAttribute="centerY" id="8EB-Js-iDn"/>
+                            <constraint firstItem="mSK-LD-sGe" firstAttribute="baseline" secondItem="5XT-XL-ZSC" secondAttribute="baseline" id="ADe-Cp-Zgh"/>
+                            <constraint firstItem="BMW-D4-Eis" firstAttribute="top" secondItem="Vti-3K-Rt4" secondAttribute="bottom" constant="269" id="ELD-wZ-TxI"/>
+                            <constraint firstItem="BMW-D4-Eis" firstAttribute="centerX" secondItem="GAs-7N-HfZ" secondAttribute="centerX" id="MV4-pw-NWp"/>
+                            <constraint firstItem="mSK-LD-sGe" firstAttribute="top" secondItem="Vti-3K-Rt4" secondAttribute="bottom" id="YTc-6o-DRd"/>
+                            <constraint firstItem="5XT-XL-ZSC" firstAttribute="leading" secondItem="GAs-7N-HfZ" secondAttribute="leadingMargin" id="hyB-2Z-owM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7y-PO-YeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GX4-aY-5q9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="395"/>
+        </scene>
+    </scenes>
+</document>
