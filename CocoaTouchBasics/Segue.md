@@ -24,5 +24,18 @@ A segue defines a transition between two view controllers in your app’s storyb
 
 [Demo: Unwind Segue](/SwiftProjects/SegueDemo)
 
+## Programatic Invokation
+```objectivec
+- (void)orientationChanged:(NSNotification *)notification {
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation) &&
+             !isShowingLandscapeView) {
+        [self performSegueWithIdentifier:@"DisplayAlternateView" sender:self];
+        isShowingLandscapeView = YES;
+    }
+// Remainder of example omitted.
+}
+```
+
 **Sources:**
 * [Apple Developers: Using Segue](https://developer.apple.com/library/prerelease/ios/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
