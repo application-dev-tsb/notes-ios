@@ -16,7 +16,7 @@
 * [Application](/CocoaTouchBasics/Application.md)
 * [Gestures](/CocoaTouchBasics/Gestures.md)
 * [Segue](/CocoaTouchBasics/Segue.md)
-* Autolayout
+* [Auto Layout](/CocoaTouchBasics/AutoLayout.md)
 * ScrollView
 * [Dynamic Animation](/CocoaTouchBasics/DynamicAnimation.md)
 * [Internationalization and Localization](/CocoaTouchBasics/InternationalizationAndLocalization.md)
