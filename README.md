@@ -7,7 +7,7 @@
 * Test
 * Instruments
 
-## aCocoa Touch Basics
+## Cocoa Touch Basics
 * [App Architecture](https://developer.apple.com/library/prerelease/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007072)
 * [MVC](/CocoaTouchBasics/MVC.md)
 * Foundation
@@ -17,9 +17,14 @@
 * [Gestures](/CocoaTouchBasics/Gestures.md)
 * [Segue](/CocoaTouchBasics/Segue.md)
 * [Auto Layout](/CocoaTouchBasics/AutoLayout.md)
-* ScrollView
 * [Dynamic Animation](/CocoaTouchBasics/DynamicAnimation.md)
 * [Internationalization and Localization](/CocoaTouchBasics/InternationalizationAndLocalization.md)
+
+## Common UI Widgets
+* ScrollView
+* TableView
+* CollectionView
+* Search
 
 ## Watch OS
 * [WatchKit](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
