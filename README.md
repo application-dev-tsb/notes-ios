@@ -4,7 +4,8 @@
 ## Tools
 * [XCode](/Tools/XCode.md)
 * [App Thinning](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html)
-* Test
+* Unit Test
+* UI Test
 * Instruments
 
 ## Cocoa Touch Basics
