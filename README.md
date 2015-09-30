@@ -35,7 +35,7 @@
 ## TV OS
 * [Apple TV Apps](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/YourFirstAppleTVApp.html#//apple_ref/doc/uid/TP40015241-CH3-SW1)
 
-## Core Servicesd
+## Core Services
 * Networking
 * Core Motion
 * [Core Location](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/index.html#//apple_ref/doc/uid/TP40007123)
