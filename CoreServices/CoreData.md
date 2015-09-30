@@ -28,3 +28,6 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 ## Query
 
 ## Update/Delete 
+
+**Sources:**
+* [Apple Developer: Core Data Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
