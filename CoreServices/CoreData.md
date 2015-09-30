@@ -9,6 +9,10 @@ NSManagedObjectModel managedObjectModel = [[NSManagedObjectModel alloc] initWith
     
 NSPersistentStoreCoordinator persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
 
+NSError *error = nil;
+NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataDemo.sqlite"];
+
+
 
 ```
 
