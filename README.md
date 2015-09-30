@@ -40,7 +40,7 @@
 * Core Motion
 * [Core Location](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/index.html#//apple_ref/doc/uid/TP40007123)
 * SQLite
-* Core Data
+* [Core Data](/CoreServices/CoreData.md)
 * File Access
 * Threading
 * Net Services
