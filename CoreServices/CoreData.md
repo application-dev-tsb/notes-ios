@@ -145,8 +145,8 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
     }
 }
 ```
-![Edit Mode](/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png)
-![Swipe Edit](/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditSwipe.png)
+<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png" width="200">
+<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditSwipe.png" width="200">
 
 **Sources:**
 * [Code: Demo Project](/ObjectiveCProjects/CoreDataAndTableViewFromScratch)
