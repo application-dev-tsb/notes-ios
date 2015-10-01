@@ -31,6 +31,7 @@
 * [Popover Controller](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/Popovers.html#//apple_ref/doc/uid/TP40011313-CH5-SW1)
 * Search
 * Today Widget
+* [Alert Controller](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/occ/cl/UIAlertController)
 
 ## Watch OS
 * [WatchKit](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
