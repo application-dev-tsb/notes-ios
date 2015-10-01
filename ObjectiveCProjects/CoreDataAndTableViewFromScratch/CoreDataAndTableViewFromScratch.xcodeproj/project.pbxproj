@@ -14,8 +14,8 @@
 		E939DBBF1BBD1FB100219870 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E939DBBD1BBD1FB100219870 /* LaunchScreen.storyboard */; };
 		E939DBC81BBD200100219870 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E939DBC61BBD200100219870 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		E939DBCB1BBD206C00219870 /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E939DBCA1BBD206C00219870 /* ItemTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E939DBD01BBD2AC600219870 /* Item+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E939DBCD1BBD2AC600219870 /* Item+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		E939DBD11BBD2AC600219870 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E939DBCF1BBD2AC600219870 /* Item.m */; settings = {ASSET_TAGS = (); }; };
+		E99DE83D1BBD60440053C436 /* Item+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E99DE83A1BBD60440053C436 /* Item+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		E99DE83E1BBD60440053C436 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E99DE83C1BBD60440053C436 /* Item.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		E939DBC71BBD200100219870 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E939DBC91BBD206C00219870 /* ItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewController.h; sourceTree = "<group>"; };
 		E939DBCA1BBD206C00219870 /* ItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewController.m; sourceTree = "<group>"; };
-		E939DBCC1BBD2AC600219870 /* Item+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E939DBCD1BBD2AC600219870 /* Item+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E939DBCE1BBD2AC600219870 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		E939DBCF1BBD2AC600219870 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		E99DE8391BBD60440053C436 /* Item+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E99DE83A1BBD60440053C436 /* Item+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E99DE83B1BBD60440053C436 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E99DE83C1BBD60440053C436 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				E939DBC61BBD200100219870 /* Model.xcdatamodeld */,
-				E939DBCC1BBD2AC600219870 /* Item+CoreDataProperties.h */,
-				E939DBCD1BBD2AC600219870 /* Item+CoreDataProperties.m */,
-				E939DBCE1BBD2AC600219870 /* Item.h */,
-				E939DBCF1BBD2AC600219870 /* Item.m */,
+				E99DE8391BBD60440053C436 /* Item+CoreDataProperties.h */,
+				E99DE83A1BBD60440053C436 /* Item+CoreDataProperties.m */,
+				E99DE83B1BBD60440053C436 /* Item.h */,
+				E99DE83C1BBD60440053C436 /* Item.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,11 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E939DBD11BBD2AC600219870 /* Item.m in Sources */,
+				E99DE83E1BBD60440053C436 /* Item.m in Sources */,
 				E939DBB41BBD1FB100219870 /* AppDelegate.m in Sources */,
 				E939DBB11BBD1FB100219870 /* main.m in Sources */,
 				E939DBCB1BBD206C00219870 /* ItemTableViewController.m in Sources */,
-				E939DBD01BBD2AC600219870 /* Item+CoreDataProperties.m in Sources */,
+				E99DE83D1BBD60440053C436 /* Item+CoreDataProperties.m in Sources */,
 				E939DBC81BBD200100219870 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +332,7 @@
 				E939DBC51BBD1FB100219870 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

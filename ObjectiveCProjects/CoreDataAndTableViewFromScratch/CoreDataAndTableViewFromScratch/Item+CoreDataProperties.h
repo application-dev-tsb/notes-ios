@@ -15,9 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Item (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSDate *dateAdded;
 @property (nullable, nonatomic, retain) NSString *itemGroup;
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSNumber *orderInGroup;
 
 @end
 

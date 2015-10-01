@@ -4,8 +4,9 @@
         <attribute name="dateAdded" attributeType="Date" syncable="YES"/>
         <attribute name="itemGroup" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderInGroup" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

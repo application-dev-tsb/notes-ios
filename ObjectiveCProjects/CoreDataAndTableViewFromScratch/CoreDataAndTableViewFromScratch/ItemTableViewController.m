@@ -50,8 +50,9 @@
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
     fetchRequest.entity = entityDescription;
     
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dateAdded" ascending:YES];
-    fetchRequest.sortDescriptors = @[sortDescriptor];
+    NSSortDescriptor *sortOrder = [NSSortDescriptor sortDescriptorWithKey:@"orderInGroup" ascending:YES];
+    NSSortDescriptor *sortGroup = [NSSortDescriptor sortDescriptorWithKey:@"itemGroup" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortGroup, sortOrder];
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"itemGroup" cacheName:@"MainCache"];
     _fetchedResultsController = fetchedResultsController;
@@ -67,22 +68,60 @@
 
 - (void)addItem
 {
-    Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
-    item.name = @"New Item";
-    item.dateAdded = [NSDate date];
-    item.itemGroup = @"Group 01";
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New" message:@"Create a new TODO item" preferredStyle:UIAlertControllerStyleAlert];
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Error Saving");
-        abort();
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Group...";
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Task...";
+    }];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
+        item.itemGroup = alertController.textFields[0].text;
+        item.name = alertController.textFields[1].text;
+        item.dateAdded = [NSDate date];
+        item.orderInGroup = [NSNumber numberWithInt:([[self countItemsInGroup:item.itemGroup] intValue] + 1)];
+        
+        NSError *error = nil;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Error Saving");
+            abort();
+        }
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:defaultAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (NSNumber*)countItemsInGroup:(NSString *)groupName
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemGroup = %@", groupName];
+    fetchRequest.predicate = predicate;
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"orderInGroup" ascending:NO];
+    fetchRequest.sortDescriptors = @[sort];
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    if ([results count] > 0) {
+        Item *lastItem = [results firstObject];
+        return lastItem.orderInGroup;
     }
+    
+    return @1;
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Item *item = (Item*)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = item.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@.) %@", item.orderInGroup, item.name];
 }
 
 #pragma mark - UITableViewDataSource
@@ -96,6 +135,13 @@
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     return [sectionInfo numberOfObjects];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    //get the first item of the section
+    Item *item = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+    return item.itemGroup;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -180,10 +226,10 @@
             [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         
-        case NSFetchedResultsChangeMove:
-            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
+        //case NSFetchedResultsChangeMove:
+        //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //    [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //    break;
             
         default:
             break;

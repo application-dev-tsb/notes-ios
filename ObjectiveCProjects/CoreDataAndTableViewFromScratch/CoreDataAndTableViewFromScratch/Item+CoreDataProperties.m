@@ -13,8 +13,9 @@
 
 @implementation Item (CoreDataProperties)
 
-@dynamic name;
 @dynamic dateAdded;
 @dynamic itemGroup;
+@dynamic name;
+@dynamic orderInGroup;
 
 @end
