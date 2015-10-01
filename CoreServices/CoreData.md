@@ -114,7 +114,9 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 
 ## Query
 
-## Update/Delete 
+## Update
+
+## Delete 
 ```objectivec
 //check if row is editable:
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -143,6 +145,9 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
     }
 }
 ```
+![Edit Mode](/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png)
+![Swipe Edit](/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditSwipe.png)
 
 **Sources:**
+* [Code: Demo Project](/ObjectiveCProjects/CoreDataAndTableViewFromScratch)
 * [Apple Developer: Core Data Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
