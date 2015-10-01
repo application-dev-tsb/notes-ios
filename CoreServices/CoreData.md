@@ -45,6 +45,7 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
         abort();
     }
     
+    _fetchedResultsController.delegate = self; //VERY IMPORTANT!!!
     return _fetchedResultsController;
 }
 ```
