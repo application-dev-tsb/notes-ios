@@ -113,6 +113,17 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 ```
 
 ## Query
+```objectivec
+NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemGroup = %@", groupName];
+fetchRequest.predicate = predicate;
+    
+NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"orderInGroup" ascending:NO];
+fetchRequest.sortDescriptors = @[sort];
+    
+NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+```
 
 ## Update
 
