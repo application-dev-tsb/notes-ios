@@ -117,13 +117,17 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 ## Update
 
 ## Delete 
+<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png" width="200">
 ```objectivec
 //check if row is editable:
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES; //YES or NO
 }
+```
 
+<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditSwipe.png" width="200">
+```objectivec
 //override this to enable manual delete by swiping
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -131,7 +135,8 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
-
+```
+```objectivec
 //animates the tableview during delete
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath
@@ -145,8 +150,6 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
     }
 }
 ```
-<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png" width="200">
-<img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditSwipe.png" width="200">
 
 **Sources:**
 * [Code: Demo Project](/ObjectiveCProjects/CoreDataAndTableViewFromScratch)
