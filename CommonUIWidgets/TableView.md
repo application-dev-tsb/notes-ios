@@ -20,6 +20,16 @@
 }
 ```
 
+## Header
+```objectivec
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    //get the first item of the section
+    Item *item = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+    return item.itemGroup;
+}
+```
+
 [Notes: Core Data and NSFetchedResultsController](/CoreServices/CoreData.md)
 
 **Sources:**
