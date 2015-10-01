@@ -6,12 +6,13 @@ Core Data is a framework that you use to manage the model layer objects in your 
 ```objectivec
 //creating a ManagedObjectContext
 NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CoreDataDemo" withExtension:@"momd"];
-NSManagedObjectModel managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
 NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
 
+NSURL *applicationDocumentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 NSError *error = nil;
-NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataDemo.sqlite"];
+NSURL *storeURL = [applicationDocumentsDirectory URLByAppendingPathComponent:@"CoreDataDemo.sqlite"];
 
 if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
 ...
