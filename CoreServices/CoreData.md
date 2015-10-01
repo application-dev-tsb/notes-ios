@@ -115,6 +115,34 @@ managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 ## Query
 
 ## Update/Delete 
+```objectivec
+//check if row is editable:
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES; //YES or NO
+}
+
+//override this to enable manual delete by swiping
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+//animates the tableview during delete
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath
+     forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        ...
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        ...
+    }
+}
+```
 
 **Sources:**
 * [Apple Developer: Core Data Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
