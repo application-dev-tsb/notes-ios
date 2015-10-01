@@ -21,6 +21,33 @@ if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType co
 NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 ```
+```objectivec
+//fetched results controller: coordinating with core data with a table view controller
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
+    fetchRequest.entity = entityDescription;
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dateCreated" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"groupName" cacheName:@"MainCache"];
+    _fetchedResultsController = fetchedResultsController;
+    
+    if (![fetchedResultsController performFetch:nil]) {
+        //TODO: handle error
+        abort();
+    }
+    
+    return _fetchedResultsController;
+}
+```
 
 
 
