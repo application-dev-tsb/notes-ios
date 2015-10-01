@@ -24,3 +24,4 @@ UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIA
 
 **Sources:**
 * [NSHipster: Alert Controller](http://nshipster.com/uialertcontroller/)
+* [Apple Developer: UIAlertController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/occ/cl/UIAlertController)
