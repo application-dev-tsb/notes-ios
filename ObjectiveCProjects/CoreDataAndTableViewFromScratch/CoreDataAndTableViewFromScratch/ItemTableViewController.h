@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Item.h"
 #import "Item+CoreDataProperties.h"
+#import "NSNumber+Increment.h"
 
 @interface ItemTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

@@ -14,6 +14,7 @@
 		E939DBBF1BBD1FB100219870 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E939DBBD1BBD1FB100219870 /* LaunchScreen.storyboard */; };
 		E939DBC81BBD200100219870 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E939DBC61BBD200100219870 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		E939DBCB1BBD206C00219870 /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E939DBCA1BBD206C00219870 /* ItemTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E943DCE71BBE34A400DBEB27 /* NSNumber+Increment.m in Sources */ = {isa = PBXBuildFile; fileRef = E943DCE61BBE34A400DBEB27 /* NSNumber+Increment.m */; settings = {ASSET_TAGS = (); }; };
 		E99DE83D1BBD60440053C436 /* Item+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E99DE83A1BBD60440053C436 /* Item+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		E99DE83E1BBD60440053C436 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E99DE83C1BBD60440053C436 /* Item.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -30,6 +31,8 @@
 		E939DBC71BBD200100219870 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E939DBC91BBD206C00219870 /* ItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewController.h; sourceTree = "<group>"; };
 		E939DBCA1BBD206C00219870 /* ItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewController.m; sourceTree = "<group>"; };
+		E943DCE51BBE34A400DBEB27 /* NSNumber+Increment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Increment.h"; sourceTree = "<group>"; };
+		E943DCE61BBE34A400DBEB27 /* NSNumber+Increment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Increment.m"; sourceTree = "<group>"; };
 		E99DE8391BBD60440053C436 /* Item+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+CoreDataProperties.h"; sourceTree = "<group>"; };
 		E99DE83A1BBD60440053C436 /* Item+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E99DE83B1BBD60440053C436 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		E939DBAE1BBD1FB100219870 /* CoreDataAndTableViewFromScratch */ = {
 			isa = PBXGroup;
 			children = (
+				E943DCDF1BBE32FA00DBEB27 /* Utils */,
 				E939DBD41BBD2AE800219870 /* ViewController */,
 				E939DBD21BBD2ACF00219870 /* Model */,
 				E939DBB21BBD1FB100219870 /* AppDelegate.h */,
@@ -106,6 +110,15 @@
 				E939DBCA1BBD206C00219870 /* ItemTableViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E943DCDF1BBE32FA00DBEB27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E943DCE51BBE34A400DBEB27 /* NSNumber+Increment.h */,
+				E943DCE61BBE34A400DBEB27 /* NSNumber+Increment.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +194,7 @@
 				E99DE83E1BBD60440053C436 /* Item.m in Sources */,
 				E939DBB41BBD1FB100219870 /* AppDelegate.m in Sources */,
 				E939DBB11BBD1FB100219870 /* main.m in Sources */,
+				E943DCE71BBE34A400DBEB27 /* NSNumber+Increment.m in Sources */,
 				E939DBCB1BBD206C00219870 /* ItemTableViewController.m in Sources */,
 				E99DE83D1BBD60440053C436 /* Item+CoreDataProperties.m in Sources */,
 				E939DBC81BBD200100219870 /* Model.xcdatamodeld in Sources */,

@@ -82,7 +82,7 @@
         item.itemGroup = alertController.textFields[0].text;
         item.name = alertController.textFields[1].text;
         item.dateAdded = [NSDate date];
-        item.orderInGroup = [NSNumber numberWithInt:([[self countItemsInGroup:item.itemGroup] intValue] + 1)];
+        item.orderInGroup = [[self countItemsInGroup:item.itemGroup] increment];
         
         NSError *error = nil;
         if (![self.managedObjectContext save:&error]) {
@@ -102,6 +102,7 @@
 - (NSNumber*)countItemsInGroup:(NSString *)groupName
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    fetchRequest.fetchLimit = 1;
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemGroup = %@", groupName];
     fetchRequest.predicate = predicate;
@@ -122,6 +123,33 @@
 {
     Item *item = (Item*)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"%@.) %@", item.orderInGroup, item.name];
+}
+
+//not really a batch update
+- (void)batchUpdateOrderForItemGroup:(NSString *)itemGroup startingWithCount:(NSNumber *)countInGroup
+{
+    NSLog(@"updating group: %@ count:%@", itemGroup, countInGroup);
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemGroup = %@ AND orderInGroup > %@", itemGroup, countInGroup];
+    fetchRequest.predicate = predicate;
+    
+    NSSortDescriptor *sortOrderInGroup = [NSSortDescriptor sortDescriptorWithKey:@"orderInGroup" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortOrderInGroup];
+    
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (!results) {
+        return;
+    }
+    
+    NSNumber *currentCount = [countInGroup copy];
+    for (Item *item in results) {
+        item.orderInGroup = currentCount;
+        currentCount = [currentCount increment];
+        NSLog(@"updated:%@", item);
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -161,7 +189,13 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSManagedObjectContext *context = self.managedObjectContext;
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        
+        Item *toDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [context deleteObject:toDelete];
+        
+        //update the orderInGroup property of the items after the deleted item
+        [self batchUpdateOrderForItemGroup:toDelete.itemGroup startingWithCount:toDelete.orderInGroup];
+        
         NSError *error = nil;
         if (![context save:&error]) {
             //TODO: handle delete error
@@ -219,19 +253,21 @@
 {
     switch (type) {
         case NSFetchedResultsChangeInsert:
-            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationRight];
             break;
             
         case NSFetchedResultsChangeDelete:
-            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
             break;
         
-        //case NSFetchedResultsChangeMove:
-        //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        //    [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-        //    break;
-            
-        default:
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        
+        case NSFetchedResultsChangeMove:
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
 }
