@@ -126,6 +126,24 @@ NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest e
 ```
 
 ## Update
+```objectivec
+NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    
+NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"dateAdded" ascending:YES];
+fetchRequest.sortDescriptors = @[sort];
+    
+NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+if (!results) {
+    return;
+}
+    
+for (Item *item in results) {
+    item.name = [NSString stringWithFormat:@"%@xxx", item.name];
+}
+    
+[self.managedObjectContext save:nil];
+```
 
 ## Delete 
 <img src="/ObjectiveCProjects/CoreDataAndTableViewFromScratch/EditMode.png" width="200">
