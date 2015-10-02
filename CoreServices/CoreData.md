@@ -171,3 +171,4 @@ NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest e
 **Sources:**
 * [Code: Demo Project](/ObjectiveCProjects/CoreDataAndTableViewFromScratch)
 * [Apple Developer: Core Data Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
+* [Tutsplus: Core Data and Batch Update](http://code.tutsplus.com/tutorials/ios-8-core-data-and-batch-updates--cms-22164)
