@@ -24,7 +24,10 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *randomItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(appendRandomThings)];
+    self.navigationItem.rightBarButtonItems = @[addButton, randomItem];
 }
 
 - (NSManagedObjectContext *)managedObjectContext
@@ -64,6 +67,27 @@
     
     _fetchedResultsController.delegate = self;
     return _fetchedResultsController;
+}
+
+//silly method adds letters at the end of random notes
+- (void)appendRandomThings
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"dateAdded" ascending:YES];
+    fetchRequest.sortDescriptors = @[sort];
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (!results) {
+        return;
+    }
+    
+    for (Item *item in results) {
+        item.name = [NSString stringWithFormat:@"%@xxx", item.name];
+    }
+    
+    [self.managedObjectContext save:nil];
 }
 
 - (void)addItem
@@ -128,7 +152,6 @@
 //not really a batch update
 - (void)batchUpdateOrderForItemGroup:(NSString *)itemGroup startingWithCount:(NSNumber *)countInGroup
 {
-    NSLog(@"updating group: %@ count:%@", itemGroup, countInGroup);
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:self.fetchedResultsController.fetchRequest.entityName];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemGroup = %@ AND orderInGroup > %@", itemGroup, countInGroup];
