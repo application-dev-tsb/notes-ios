@@ -32,6 +32,7 @@
 * Search
 * [Today Widget](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/NotificationCenter.html)
 * [Alert Controller](/CommonUIWidgets/AlertController.md)
+* [Keyboard](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/Keyboard.html#//apple_ref/doc/uid/TP40014214-CH16-SW1)
 
 ## Watch OS
 * [WatchKit](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
