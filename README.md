@@ -30,7 +30,7 @@
 * [Split View Controller](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/SplitViewControllers.html)
 * [Popover Controller](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/Popovers.html#//apple_ref/doc/uid/TP40011313-CH5-SW1)
 * Search
-* Today Widget
+* [Today Widget](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/NotificationCenter.html)
 * [Alert Controller](/CommonUIWidgets/AlertController.md)
 
 ## Watch OS
