@@ -36,4 +36,5 @@ NSString *myString = NSLocalizedString(@"Change", "The title of the button when 
 
 **Resources:**
 * [NSHipster: Localized Strings](http://nshipster.com/nslocalizedstring/)
+* [Raywenderlich: Internationalization Tutorial](http://www.raywenderlich.com/64401/internationalization-tutorial-for-ios-2014)
 * [Apple: Internationalization and Localization](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html#//apple_ref/doc/uid/10000171i)
