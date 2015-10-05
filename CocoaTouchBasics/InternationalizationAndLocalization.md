@@ -15,6 +15,20 @@ NSString *myString = NSLocalizedString(@"Change", "The title of the button when 
 "Change" = "Cambiar";
 ```
 
+## Localizing the App Name
+* create "InfoPlist.strings"
+* make it localizable
+
+<img src="/Images/Internationalize.png" width="200">
+```
+//file: Base.lproj/InfoPlist.strings
+"Change" = "Change";
+```
+* modify value for "CFBundleDisplayName"
+```
+//file: es.lproj/InfoPlist.strings
+"Change" = "Cambiar";
+```
 
 [Demo: Internationalization](/ObjectiveCProjects/I8Loc8Demo)
 
