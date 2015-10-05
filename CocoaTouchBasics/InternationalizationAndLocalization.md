@@ -7,11 +7,11 @@ Localization is the process of translating your app into multiple languages.
 //looks for the key "Change" from the Localizable.strings file
 NSString *myString = NSLocalizedString(@"Change", "The title of the button when it is changed");
 ```
-```int8
-//Base.lproj
+```
+//file: Base.lproj/Localizable.strings
 "Change" = "Change";
 
-//es.lproj:
+//file: es.lproj/Localizable.strings
 "Change" = "Cambiar";
 ```
 
