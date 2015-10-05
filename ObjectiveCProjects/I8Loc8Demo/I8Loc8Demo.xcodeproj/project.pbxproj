@@ -14,6 +14,7 @@
 		E99A95A91BC2070000D18AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99A95A81BC2070000D18AE3 /* Assets.xcassets */; };
 		E99A95AC1BC2070000D18AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99A95AA1BC2070000D18AE3 /* LaunchScreen.storyboard */; };
 		E9B17E541BC2698E008F5F92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9B17E561BC2698E008F5F92 /* Localizable.strings */; };
+		E9C5EC511BC27221004962E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9C5EC531BC27221004962E5 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		E9B17E461BC25979008F5F92 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		E9B17E551BC2698E008F5F92 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9B17E571BC26992008F5F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9C5EC521BC27221004962E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9C5EC541BC27225004962E5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 		E99A95901BC2070000D18AE3 = {
 			isa = PBXGroup;
 			children = (
+				E9C5EC531BC27221004962E5 /* InfoPlist.strings */,
 				E99A959B1BC2070000D18AE3 /* I8Loc8Demo */,
 				E99A959A1BC2070000D18AE3 /* Products */,
 			);
@@ -148,6 +152,7 @@
 				E9B17E541BC2698E008F5F92 /* Localizable.strings in Resources */,
 				E99A95A91BC2070000D18AE3 /* Assets.xcassets in Resources */,
 				E99A95A71BC2070000D18AE3 /* Main.storyboard in Resources */,
+				E9C5EC511BC27221004962E5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +198,15 @@
 			);
 			name = Localizable.strings;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		E9C5EC531BC27221004962E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9C5EC521BC27221004962E5 /* Base */,
+				E9C5EC541BC27225004962E5 /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
