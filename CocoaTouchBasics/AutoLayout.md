@@ -20,8 +20,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)]];
 }
 ```
-
+[Demo Project: Apple Autolayout](/SwiftProjects/autolayoutcookbook)
 
 **Source:**
+
 * [Apple Developer: About Auto Layout and Layout Constraints](https://developer.apple.com/library/ios/recipes/xcode_help-IB_auto_layout/chapters/UnderstandingAutolayout.html)
 * [Visual Format Language](http://commandshift.co.uk/blog/2013/01/31/visual-format-language-for-autolayout/)
