@@ -44,6 +44,20 @@ constraint.priority = 1000;
 [self.testButton setContentHuggingPriority:500 forAxis:UILayoutConstraintAxisHorizontal];
 ```
 
+## Compression Resistance
+```objectivec
+NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.testButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:nil
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:0
+                                                                   constant:100];
+constraint.priority = 500;
+[self.testButton addConstraint:constraint];
+    
+[self.testButton setContentCompressionResistancePriority:550 forAxis:UILayoutConstraintAxisHorizontal];
+```
 
 **Source:**
 
