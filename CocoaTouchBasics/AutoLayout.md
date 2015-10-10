@@ -24,6 +24,9 @@
 
 ## Intrinsic Size
 **UIView.instrinsicContentSize** describes the minimum space needed to express the full view with squeezing or clipping the data (ie: UILabel.title, or image size of image in UIImageView)
+```objectivec
+NSLog(@"Intrinsic Size=%@", NSStringFromCGSize(self.testButton.intrinsicContentSize));
+```
 
 **Source:**
 
