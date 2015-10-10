@@ -22,6 +22,9 @@
 ```
 [Demo Project: Apple Autolayout](/SwiftProjects/autolayoutcookbook)
 
+## Intrinsic Size
+**UIView.instrinsicContentSize** describes the minimum space needed to express the full view with squeezing or clipping the data (ie: UILabel.title, or image size of image in UIImageView)
+
 **Source:**
 
 * [Apple Developer: About Auto Layout and Layout Constraints](https://developer.apple.com/library/ios/recipes/xcode_help-IB_auto_layout/chapters/UnderstandingAutolayout.html)
