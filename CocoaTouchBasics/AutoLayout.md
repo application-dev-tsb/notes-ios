@@ -27,6 +27,23 @@
 ```objectivec
 NSLog(@"Intrinsic Size=%@", NSStringFromCGSize(self.testButton.intrinsicContentSize));
 ```
+### Hugging Priority
+```objectivec
+NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.testButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:nil
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:0
+                                                                   constant:100];
+constraint.priority = 1000;
+[self.testButton addConstraint:constraint];
+    
+//hugging priority is less than WIDTH in autolayout:
+//so the width constraint takes over
+[self.testButton setContentHuggingPriority:500 forAxis:UILayoutConstraintAxisHorizontal];
+```
+
 
 **Source:**
 
